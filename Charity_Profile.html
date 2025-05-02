@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HelpHub - Charity Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f7f9fa;
+      color: #222;
+    }
+    header {
+      background-color: #007a99;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5em;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a3d2ca;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 2em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007a99;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+    h3 {
+      color: #004e66;
+      margin-bottom: 0.3em;
+    }
+    img.charity-photo {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1em;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    section.description, section.mission, section.contact {
+      margin-bottom: 1.8em;
+    }
+    p {
+      font-size: 1.05em;
+      line-height: 1.5;
+      color: #444;
+    }
+    form {
+      background: #eef8fb;
+      padding: 1.5em;
+      border-radius: 8px;
+      border: 1px solid #b6dde8;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      color: #005f73;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 0.6em 0.8em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      resize: vertical;
+      font-family: inherit;
+    }
+    form button {
+      background-color: #007a99;
+      color: white;
+      border: none;
+      padding: 0.8em 1.6em;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #004e66;
+    }
+    footer {
+      background-color: #004e66;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+      margin-top: 3em;
+    }
+    footer a {
+      color: #a3d2ca;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HelpHub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="charities.html">Charities</a>
+    <a href="charity_profile.html">Charity Profile</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Helping Hands Charity</h2>
+  <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=900&q=80" alt="Helping Hands Charity" class="charity-photo" />
+
+  <section class="description">
+    <h3>About Us</h3>
+    <p>Helping Hands is dedicated to providing shelter, food, and educational programs to homeless communities. Our goal is to empower individuals to rebuild their lives and contribute positively to society.</p>
+  </section>
+
+  <section class="mission">
+    <h3>Our Mission</h3>
+    <p>To eradicate homelessness through compassionate support, community engagement, and sustainable resources that foster growth and independence.</p>
+  </section>
+
+  <section class="contact">
+    <h3>Volunteer Sign-Up</h3>
+    <form id="volunteer-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Why do you want to volunteer with us?</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 HelpHub. All rights reserved. | <a href="mailto:contact@helphub.org">Contact Us</a></p>
+</footer>
+
+<script>
+  document.getElementById('volunteer-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for signing up to volunteer! We will be in touch soon.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
+
